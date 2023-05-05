@@ -10,7 +10,7 @@ See the [book webpage](http://www.clawpack.org/fvmhp_materials/) for links to th
 
 This repository currently contains:
 
-- Slides to accompany a set of lectures from 2023 that will be posted on YouTube soon.
+- Slides to accompany a set of lectures from 2023 that will be posted on the [Clawpack YouTube channel](https://www.youtube.com/channel/UCxIdwWtDvUG_kdn-KiSVroQ) soon.
 - Latex files that created the slides, which you are free to modify or recombine for your own lectures.
 
 In the future other materials may be added, in particular some Jupyter notebooks to illustrate some of this material.
@@ -22,6 +22,20 @@ See
 [LICENSE.md](https://github.com/clawpack/fvmhp_materials/blob/master/LICENSE.md)
 for the license and read more at [Creative
 Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+You are welcome to use these materials for your own non-commercial purposes, and free to modify the slides as desired to better fit your needs.  Please acknowledge the original author when appropriate.
+
+## Slide decks as pdf files
+
+The directory `slides_pdf` contains pdf versions of each slide deck to accompany the YouTube lectures FVMHP01-FVMHP25 on the Clawpack YouTube channel.
+
+In that directory you can also find a combined file deck `fvmhp01-25.pdf` with all the slides from all lectures (more than 1000, but perhaps useful to search when looking for a particular topic).  The version `fvmhp01-25_draft.pdf` is the same set of slides but in draft form, with the path to the individual latex file for each slide in the bottom corner so that you can find the source if you wish to change it.
+
+## Modifying, adding, or re-arranging slides
+
+The directory `slides` contains the slide decks as latex files.  Each deck reads in a set of latex files for the individual slides in the deck.  Those files are in the directory `fvm` with the `.be` extension (for beamer).
+
+See [slides/README.md](slides/README.md) for some information about how the slide decks are organized and tips on how to create a more suitable slide deck for your own needs.  (The slides are all in latex and beamer is used to convert decks to pdf).
 
 ## See also
 

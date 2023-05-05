@@ -1,0 +1,42 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/color/beamercolorthemecrane.sty,v 1.8 2004/10/28 17:15:51 tantau Exp $
+
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\mode<presentation>
+
+%\definecolor{gold}{RGB}{150,100,200}
+\definecolor{gold}{RGB}{250,180,6}
+\definecolor{purple}{RGB}{76,6,76}
+
+\setbeamercolor{structure}{fg=purple}
+
+\setbeamercolor{palette primary}{fg=purple,bg=gold!40}
+\setbeamercolor{palette secondary}{fg=purple,bg=gold!40}
+\setbeamercolor{palette tertiary}{fg=purple,bg=gold!40}
+\setbeamercolor{palette quaternary}{fg=purple,bg=gold!60}
+
+\setbeamercolor{titlelike}{parent=palette quaternary}
+
+\setbeamercolor{block title}{fg=purple,bg=gold!80}
+\setbeamercolor{block title alerted}{use=alerted text,fg=purple,bg=alerted text.fg!75!bg}
+\setbeamercolor{block title example}{use=example text,fg=purple,bg=example text.fg!75!bg}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!25!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!25!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!25!bg}
+
+\setbeamercolor{sidebar}{bg=gold!40}
+  
+\setbeamercolor{palette sidebar primary}{fg=purple}
+\setbeamercolor{palette sidebar secondary}{fg=purple}
+\setbeamercolor{palette sidebar tertiary}{fg=purple}
+\setbeamercolor{palette sidebar quaternary}{fg=purple}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>

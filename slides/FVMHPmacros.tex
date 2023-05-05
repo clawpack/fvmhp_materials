@@ -1,0 +1,1106 @@
+
+% Macros from FVMHP book -- shortened!
+
+\newcommand{\ignore}[1]{}
+
+%------------------
+% matrices and vectors:
+\newenvironment{vect}{\left[ \begin{array}{c}}{\end{array}\right]}
+\newenvironment{rvect}{\left[ \begin{array}{r}}{\end{array}\right]}
+\newenvironment{mat2}{\left[ \begin{array}{cc}}{\end{array}\right]}
+\newenvironment{mat}{\left[ \begin{array}{ccccccccccccc}}{\end{array}\right]}
+\newenvironment{rmat}{\left[ \begin{array}{rrrrrrrrrrrrr}}{\end{array}\right]}
+\newenvironment{lmat}{\left[ \begin{array}{lllllllllllll}}{\end{array}\right]}
+\newcommand\bcm{\begin{mat}}
+\newcommand\ecm{\end{mat}}
+\newcommand\brm{\begin{rmat}}
+\newcommand\erm{\end{rmat}}
+\newcommand\blm{\begin{lmat}}
+\newcommand\elm{\end{lmat}}
+
+
+%------------------
+% piecewise definitions --  one of several choices with left brace:
+\newenvironment{pwdef}{\left\{ \begin{array}{ll}}{\end{array}\right.}
+\newcommand\bpwdef{\begin{pwdef}}
+\newcommand\epwdef{\end{pwdef}}
+\newcommand\when{&\m{if}}
+\newcommand\otherwise{&\m{otherwise}}
+
+
+
+
+
+%------------------
+% new environments
+% these don't always seem to be numbered properly!
+%  DELETED
+
+%-------------
+% misc. macros
+
+
+\newcommand\bc{\begin{center}}
+\newcommand\ec{\end{center}}
+\newcommand\bi{\begin{itemize}}
+\newcommand\ei{\end{itemize}}
+\newcommand\be{\begin{enumerate}}
+\newcommand\ee{\end{enumerate}}
+
+
+\newcommand{\m}[1]{~~~\mbox{#1}~\,}
+\newcommand\bsplit{\begin{split}}
+\newcommand\esplit{\end{split}}
+\newcommand{\eqn}[1]{(\ref{#1})}
+\newcommand{\eq}{\begin{equation}}
+\newcommand{\en}{\end{equation}}
+\newcommand{\eqm}{\begin{eqnarray}}
+\newcommand{\enm}{\end{eqnarray}}
+\newcommand{\eqmno}{\begin{eqnarray*}}
+\newcommand{\enmno}{\end{eqnarray*}}
+\newcommand{\eqml}[1]{\eql{#1}\begin{array}{rcl}}
+\newcommand{\enml}{\end{array}\en}
+\newcommand{\eql}{\begin{equation}\label}
+\newcommand{\eqsub}[1]{\begin{subequations}\label{#1}\eqm }
+\newcommand{\ensub}{\enm\end{subequations}}
+\newcommand\nono{\nonumber}
+
+
+\newcommand{\half}{{\frac{1}{2}}}
+\newcommand{\smhalf}{{\small\frac{1}{2}}}
+\newcommand{\goto}{\rightarrow}
+\newcommand{\vthin}{\vskip 5pt}
+\newcommand\vsp{\vskip .1in}
+\newcommand\vvsp{\vskip .3in}
+\def\hsp{\hskip 5pt}
+\def\hhsp{\hskip 15pt}
+\newcommand\noaskip{\noalign{\vskip 4pt}}
+\newcommand\lp{\left(}
+\newcommand\rp{\right)}
+\newcommand\eps{\epsilon}
+\newcommand\lam{\lambda}
+\newcommand\reals{{{\rm l} \kern -.15em {\rm R} }}
+\renewcommand{\Re}{\mbox{Re}}
+\newcommand\intoinf{\int_0^\infty~}
+\newcommand\complex{{\raisebox{.043ex}{\rule{0.07em}{1.3ex}} \hskip -.35em {\rm C}}}
+\newcommand\for{\quad\mbox{for}~}
+\newcommand\grad{\nabla}
+\newcommand\ie{{\sl i.e.}}
+\newcommand\eg{{\sl e.g.}}
+%\newcommand\u{\upsilon}
+\newcommand\intx{\int_{x_1}^{x_2}\,}
+\newcommand\intt{\int_{t_1}^{t_2}\,}
+\newcommand\intinf{\int_{-\infty}^{\infty}\,}
+\newcommand\ddt{\frac{\partial}{\partial t}}
+\newcommand\ddx{\frac{\partial}{\partial x}}
+\newcommand\ddy{\frac{\partial}{\partial y}}
+\newcommand\ddz{\frac{\partial}{\partial z}}
+\newcommand{\ok}[1]{O(k^{#1})}
+\newcommand{\oh}[1]{O(h^{#1})}
+\newcommand{\E}[1]{\times 10^{#1}}
+\newcommand\claw{{\sc clawpack}}
+\newcommand\amrclaw{{\sc amrclaw}}
+\newcommand\matlab{{\sc matlab}}
+\newcommand\fortran{{\sc fortran}}
+
+
+
+\newcommand\dx{\partial_x}
+\newcommand\dy{\partial_y}
+\newcommand\dt{\partial_t}
+\newcommand\Dx{\Delta x}
+\newcommand\Dy{\Delta y}
+\newcommand\Dz{\Delta z}
+\newcommand\Dt{\Delta t}
+\newcommand\dtdx{\frac{\Delta t}{\Delta x}}
+\newcommand\amax{a_{\max}}
+\newcommand\umax{u_{\max}}
+\newcommand\rhomax{\rho_{\max}}
+\newcommand\intjcell{\int_{x_{j-1/2}}^{x_{j+1/2}}~}
+\newcommand\ujp{U_{j+1}}
+\newcommand\ujm{U_{j-1}}
+\newcommand\unp{U^{n+1}}
+\newcommand\uipn{U_{i+1}^n}
+\newcommand\uimn{U_{i-1}^n}
+\newcommand\uinp{U_i^{n+1}}
+\newcommand\uin{U_i^n}
+\newcommand\ujpn{U_{j+1}^n}
+\newcommand\ujmn{U_{j-1}^n}
+\newcommand\ujnp{U_j^{n+1}}
+\newcommand\ujnm{U_j^{n-1}}
+\newcommand\ujmnp{U_{j-1}^{n+1}}
+\newcommand\ujpnp{U_{j+1}^{n+1}}
+\newcommand\ujn{U_j^n}
+\newcommand\vjmn{V_{j-1}^n}
+\newcommand\vjpn{V_{j+1}^n}
+\newcommand\vjnp{V_j^{n+1}}
+\newcommand\vjn{V_j^n}
+\newcommand\vnp{V^{n+1}}
+\newcommand\wjmn{W_{j-1}^n}
+\newcommand\wjnp{W_j^{n+1}}
+\newcommand\wjn{W_j^n}
+\newcommand\ejmn{E_{j-1}^n}
+\newcommand\ejpn{E_{j+1}^n}
+\newcommand\ejnp{E_j^{n+1}}
+\newcommand\ejn{E_j^n}
+%\newcommand\cjmh{C_{j-1/2}}
+%\newcommand\cjph{C_{j+1/2}}
+%\newcommand\djmh{D_{j-1/2}}
+%\newcommand\djph{D_{j+1/2}}
+\newcommand\cjmh{C_{j-1}}
+\newcommand\cjph{C_{j}}
+\newcommand\djmh{D_{j-1}}
+\newcommand\djph{D_{j}}
+\newcommand\thjn{\theta_j^n}
+\newcommand\xjm{{x_{j-1}}}
+\newcommand\xjp{{x_{j+1}}}
+\newcommand\xjmh{{x_{j-1/2}}}
+\newcommand\xjph{{x_{j+1/2}}}
+\newcommand\tnp{{t_{n+1}}}
+\newcommand\tnph{t_{n+1/2}}
+\newcommand\aij{A_{ij}}
+
+\newcommand\uij{U_{ij}}
+\newcommand\uipj{U_{i+1,j}}
+\newcommand\uimj{U_{i-1,j}}
+\newcommand\uijp{U_{i,j+1}}
+\newcommand\uijm{U_{i,j-1}}
+\newcommand\uipjm{U_{i+1,j-1}}
+\newcommand\uipjp{U_{i+1,j+1}}
+\newcommand\uimjp{U_{i-1,j+1}}
+\newcommand\uimjm{U_{i-1,j-1}}
+
+\newcommand\uijn{U_{ij}^n}
+\newcommand\uijnp{U_{ij}^{n+1}}
+\newcommand\uipjn{U_{i+1,j}^n}
+\newcommand\uimjn{U_{i-1,j}^n}
+\newcommand\uijpn{U_{i,j+1}^n}
+\newcommand\uijmn{U_{i,j-1}^n}
+\newcommand\uipjmn{U_{i+1,j-1}^n}
+\newcommand\uipjpn{U_{i+1,j+1}^n}
+\newcommand\uimjpn{U_{i-1,j+1}^n}
+\newcommand\uimjmn{U_{i-1,j-1}^n}
+\newcommand\luijn{u_{ij}^n}
+\newcommand\luijnp{u_{ij}^{n+1}}
+\newcommand\fijn{F_{ij}^n}
+\newcommand\gijn{G_{ij}^n}
+\newcommand\hrho{\hat\rho}
+\newcommand\Jsum{\sum_{j=J}^K}
+\newcommand\njsum{\sum_{n=0}^\infty\,\sum_{j=-\infty}^\infty\,}
+\newcommand\suminf{\sum_{j=-\infty}^\infty\,}
+\newcommand\ujln{U_j^{(l)n}}
+\newcommand\tun{\tilde u^n}
+\newcommand\hh{{\cal H}_k}
+\newcommand\dbar{{\cal D}(\bar x,\bar t)}
+\newcommand\dnbar{{\cal D}_k(\bar x,\bar t)}
+\newcommand\dobar{{\cal D}_0(\bar x,\bar t)}
+\newcommand\askgo{\quad\mbox{as}~~k\goto 0}
+\newcommand\sjn{\sigma_j^n}
+\newcommand\sig{\sigma}
+\newcommand\sjmn{\sigma_{j-1}^n}
+\newcommand\tpj{\theta_{pj}}
+\newcommand\apj{\alpha_{pj}}
+\newcommand\sgn{\mbox{sgn}}
+\newcommand\minmod{\mbox{minmod}}
+\newcommand\sg{{\cal G}}
+\newcommand\sh{{\cal H}}
+\newcommand\ujt{U_j(t)}
+\newcommand\ujpt{U_{j+1}(t)}
+\newcommand\ext{e^{-ta\partial_x}}
+\newcommand\eyt{e^{-tb\partial_y}}
+\newcommand\exyt{e^{-t(a\partial_x + b\partial_y)}}
+\newcommand\eA{e^{-tA\partial_x}}
+\newcommand\ehA{e^{-\half tA\partial_x}}
+\newcommand\eB{e^{-tB\partial_y}}
+\newcommand\eAB{e^{-t(A\partial_x + B\partial_y)}}
+\newcommand\ekhA{e^{-\half kA\partial_x}}
+\newcommand\ekB{e^{-kB\partial_y}}
+\newcommand\ekAB{e^{-k(A\partial_x + B\partial_y)}}
+\newcommand\hhx{{\cal H}_{k/2}^x}
+\newcommand\hy{{\cal H}_{k}^y}
+\newcommand\hx{{\cal H}_{k}^x}
+%\newcommand\uss{u^{**}}
+\newcommand\wset{{\cal W}}
+\newcommand\dist{\operatorname{dist}}
+\newcommand\kcpt{{\cal K}}
+\newcommand\LT{L_{1,{\scriptscriptstyle T}}}
+\newcommand\FG{F_{\scriptscriptstyle G}}
+\newcommand\uD{u^{\scriptscriptstyle D}}
+\newcommand\llw{L_{\scriptscriptstyle LW}}
+\newcommand\supp{\mbox{Supp}}
+\newcommand\tvt{\mbox{TV}_{\scriptscriptstyle T}}
+\newcommand\hun{\hat u^n}
+\newcommand\uhs{\hat u^*}
+\newcommand\hau{\hat A(u_l,u_r)}
+\newcommand\rh{\rho^{1/2}}
+\newcommand\FH{F_{\scriptscriptstyle H}}
+\newcommand\FL{F_{\scriptscriptstyle L}}
+\newcommand\vpj{V_{pj}}
+\newcommand\vpjp{V_{pj_p}}
+\newcommand\vpjpm{V_{p,j_p-1}}
+\newcommand\bpj{\beta_{pj}}
+\newcommand\bpjp{\beta_{pj_p}}
+\newcommand\bpjpm{\beta_{p,j_p-1}}
+\newcommand\sigpj{\sig_{pj}}
+\newcommand\sigpjp{\sig_{pj_p}}
+\newcommand\sigpjpm{\sig_{p,j_p-1}}
+\newcommand\lpj{\hat \lam_{pj}}
+\newcommand\rpj{\hat r_{pj}}
+\newcommand\nupj{\nu_{pj}}
+\newcommand\w{\tilde u}
+\newcommand\cj{[\xjmh,\xjph]}
+%\newcommand{\ttl}[1]{\begin{tabbing} xxxxxxxx\=\kill \>{\tt #1} \end{tabbing}}
+%\newcommand{\ttl}[1]{\begin{tabbing} xxxx\=\kill \>{\tt #1} \end{tabbing}}
+\newcommand{\ttl}[1]{\\ ~\hskip 10pt {\tt #1}\\}
+\newcommand\kh{\frac{\Delta t}{\Delta x}}
+\newcommand\lip{\lambda_i^p}
+\newcommand\lamijp{\lambda_{ij}^p}
+\newcommand\betaps{\beta^{ps}}
+\newcommand\rij{\rho_{ij}}
+\newcommand\rimj{\rho_{i-1,j}}
+\newcommand\ripj{\rho_{i+1,j}}
+\newcommand\rijp{\rho_{i,j+1}}
+\newcommand\rijm{\rho_{i,j-1}}
+\newcommand\cij{c_{ij}}
+\newcommand\cimj{c_{i-1,j}}
+\newcommand\cipj{c_{i+1,j}}
+\newcommand\cijp{c_{i,j+1}}
+\newcommand\cijm{c_{i,j-1}}
+\newcommand\qi{\Q_i}
+\newcommand\qin{\Q_i^{n}}
+\newcommand\qinp{\Q_i^{n+1}}
+\newcommand\qimn{\Q_{i-1}^{n}}
+\newcommand\qipn{\Q_{i+1}^{n}}
+\newcommand\qimnp{\Q_{i-1}^{n+1}}
+\newcommand\qipnp{\Q_{i+1}^{n+1}}
+\newcommand\bqi{\bar \Q_i}
+\newcommand\qim{\Q_{i-1}}
+\newcommand\qip{\Q_{i+1}}
+\newcommand\qij{\Q_{ij}}
+\newcommand\bqij{\bar \Q_{ij}}
+\newcommand\qijn{\Q_{ij}^n}
+\newcommand\qijnp{\Q_{ij}^{n+1}}
+
+\newcommand\fin{F_i^n}
+\newcommand\fipn{F_{i+1}^n}
+\newcommand\fij{F_{ij}}
+\newcommand\fimj{F_{i-1,j}}
+\newcommand\fipj{F_{i+1,j}}
+\newcommand\fijp{F_{i,j+1}}
+\newcommand\fijm{F_{i,j-1}}
+\newcommand\tfij{\tilde F_{ij}}
+\newcommand\tfipj{\tilde F_{i+1,j}}
+\newcommand\gij{G_{ij}}
+\newcommand\gimj{G_{i-1,j}}
+\newcommand\gipj{G_{i+1,j}}
+\newcommand\gijp{G_{i,j+1}}
+\newcommand\gijm{G_{i,j-1}}
+\newcommand\tgij{\tilde G_{ij}}
+\newcommand\tgijp{\tilde G_{i,j+1}}
+\newcommand\tgimj{\tilde G_{i-1,j}}
+\newcommand\tgimjp{\tilde G_{i-1,j+1}}
+\newcommand\sip{s_i^p}
+\newcommand\aip{\alf_i^p}
+\newcommand\rip{r_i^p}
+%\newcommand\Dfp{\Delta f^+}
+%\newcommand\Dfm{\Delta f^-}
+%\newcommand\Dfim{\Delta f_i^-}
+%\newcommand\Dfip{\Delta f_i^+}
+\newcommand\Dfp{{\cal A}^+\Delta q}
+\newcommand\Dfm{{\cal A}^-\Delta q}
+\newcommand\Dfim{{\cal A}^-\Delta \Q_i}
+\newcommand\Dfip{{\cal A}^+\Delta \Q_i}
+\newcommand\apd{{\cal A}^+\Delta }
+\newcommand\amd{{\cal A}^-\Delta }
+\newcommand\adq{{\cal A}\Delta \Q}
+\newcommand\apdq{{\cal A}^+\Delta \Q}
+\newcommand\amdq{{\cal A}^-\Delta \Q}
+\newcommand\bpdq{{\cal B}^+\Delta \Q}
+\newcommand\bmdq{{\cal B}^-\Delta \Q}
+\newcommand\amdqi{{\cal A}^-\Delta \Q_i}
+\newcommand\amdqip{{\cal A}^-\Delta \Q_{i+1}}
+\newcommand\apdqi{{\cal A}^+\Delta \Q_i}
+\newcommand\Dfpp{\Delta f^{++}}
+\newcommand\Dfpm{\Delta f^{+-}}
+\newcommand\Dq{\Delta \Q}
+\newcommand\Dqi{\Delta \Q_i}
+\newcommand\Dqij{\Delta \Q_{ij}}
+\newcommand\Df{\Delta f}
+\newcommand\DtDy{\frac{\Delta t}{\Delta y}}
+\newcommand\DtDx{\frac{\Delta t}{\Delta x}}
+\newcommand\W{{\cal W}}
+\newcommand\WZ{{\cal Z}}
+\newcommand\tW{\widetilde {\cal W}}
+\newcommand\Wp{{\cal W}^p}
+\newcommand\Wip{{\cal W}_i^p}
+\newcommand\Wimp{{\cal W}_{i-1}^p}
+\newcommand\Wijp{{\cal W}_{ij}^p}
+\newcommand\Wipjp{{\cal W}_{i+1,j}^p}
+\newcommand\Wimjp{{\cal W}_{i-1,j}^p}
+\newcommand\tWijp{\widetilde {\cal W}_{ij}^p}
+\newcommand\tWip{\widetilde {\cal W}_i^p}
+\newcommand\tfi{\tilde F_{i}}
+\newcommand\tfip{\tilde F_{i+1}}
+\newcommand\fip{F_{i+1}}
+\newcommand\summ{\sum_{\lam_i^p<0}}
+\newcommand\sump{\sum_{\lam_i^p>0}}
+\newcommand\msum{\sum_{i=1}^m}
+\newcommand\psum{\sum_{p=1}^m}
+\newcommand\DGi{\Delta_i^{\mbox{\small up}}}
+\newcommand\DGij{\Delta_{ij}^{\mbox{up}}}
+\newcommand\Aij{A_{ij}}
+\newcommand\Dfijp{{\cal A}^+\Delta \Q_{ij}}
+\newcommand\Dfijm{{\cal A}^-\Delta \Q_{ij}}
+\newcommand\Dgijp{{\cal B}^+\Delta_y \Q_{ij}}
+\newcommand\Dgijm{{\cal B}^-\Delta_y \Q_{ij}}
+\newcommand\asdq{{\cal A}^*\Delta \Q}
+\newcommand\apdqij{{\cal A}^+\Delta \Q_{ij}}
+\newcommand\amdqij{{\cal A}^-\Delta \Q_{ij}}
+\newcommand\apmdq{{\cal A}^{\pm}\Delta \Q}
+\newcommand\apmdqij{{\cal A}^{\pm}\Delta \Q_{ij}}
+\newcommand\amdqipj{{\cal A}^-\Delta \Q_{i+1,j}}
+\newcommand\asdqij{{\cal A}^*\Delta \Q_{ij}}
+\newcommand\bpdqij{{\cal B}^+\Delta \Q_{ij}}
+\newcommand\bmdqij{{\cal B}^-\Delta \Q_{ij}}
+\newcommand\bpmdq{{\cal B}^{\pm}\Delta \Q}
+\newcommand\bpmdqij{{\cal B}^{\pm}\Delta \Q_{ij}}
+\newcommand\bmdqijp{{\cal B}^-\Delta \Q_{i,j+1}}
+\newcommand\bpmapdq{{\cal B}^{\pm}{\cal A}^+ \Delta \Q}
+\newcommand\bpmamdq{{\cal B}^{\pm}{\cal A}^- \Delta \Q}
+\newcommand\apmbpdq{{\cal A}^{\pm}{\cal B}^+ \Delta \Q}
+\newcommand\apmbmdq{{\cal A}^{\pm}{\cal B}^- \Delta \Q}
+\newcommand\sijp{\lam_{ij}^p}
+\newcommand\bmamdq{{\cal B}^-{\cal A}^-\Delta \Q}
+\newcommand\bmapdq{{\cal B}^-{\cal A}^+\Delta \Q}
+\newcommand\bpamdq{{\cal B}^+{\cal A}^-\Delta \Q}
+\newcommand\bpapdq{{\cal B}^+{\cal A}^+\Delta \Q}
+\newcommand\bpasdq{{\cal B}^+{\cal A}^*\Delta \Q}
+\newcommand\bmasdq{{\cal B}^-{\cal A}^*\Delta \Q}
+\newcommand\bpmasdq{{\cal B}^{\pm}{\cal A}^*\Delta \Q}
+\newcommand\bpmapmdq{{\cal B}^{\pm}{\cal A}^{\pm}\Delta \Q}
+\newcommand\ambsdq{{\cal A}^-{\cal B}^*\Delta \Q}
+\newcommand\apbsdq{{\cal A}^+{\cal B}^*\Delta \Q}
+\newcommand\bsdq{{\cal B}^*\Delta q}
+
+
+\newcommand\uimhj{u_{i-1/2,j}}
+\newcommand\uiphj{u_{i+1/2,j}}
+\newcommand\vimhj{v_{i-1/2,j}}
+\newcommand\vijmh{v_{i,j-1/2}}
+\newcommand\vijph{v_{i,j+1/2}}
+%\newcommand\ql{q^{\scriptstyle L}}
+%\newcommand\qr{q^{\scriptstyle R}}
+\newcommand\cim{c_{i-1}}
+\newcommand\T{{\cal T}}
+\newcommand\bu{\bar u}
+\newcommand\bv{\bar v}
+\newcommand\cfl{CFL}
+\newcommand\epixi{e^{i\xi\Dx}}
+\newcommand\emixi{e^{-i\xi\Dx}}
+\newcommand\epieta{e^{i\eta\Dy}}
+\newcommand\emieta{e^{-i\eta\Dy}}
+\newcommand\qeps{\q^{\eps}}
+\newcommand\tqxi{\tq(\xi)}
+\newcommand\dOmega{\partial\Omega}
+
+\newcommand\fup{F^{\mbox{up}}}
+\newcommand\bulk{K}
+
+% group equations as (1.1a), (1.1b), etc.
+%
+\newcounter{equationgroup}
+%
+\newenvironment{eqngroup}{%
+\refstepcounter{equation}%
+\setcounter{equationgroup}{\value{equation}}%
+\edef\theequationgroup{\theequation}%
+\setcounter{equation}0%
+\newcommand\theequation{\theequationgroup\alph{equation}}}{%
+\setcounter{equation}{\value{equationgroup}}%
+\edef\theequation{\theequationgroup}}%
+%\global\@ignoretrue}
+
+
+\newcommand\smax{s_{\text{max}}}
+\newcommand\bq{\q_s}
+\newcommand\bt{\bar t}
+\newcommand\wI{\w^I}
+\newcommand\wII{\w^{II}}
+\newcommand\tq{\tilde \q}
+\newcommand\qjn{\Q_j^n}
+\newcommand\qjpn{\Q_{j+1}^n}
+\newcommand\akh{\frac{ak}{h}}
+\newcommand\uim{U_{i-1}}
+\newcommand\uip{U_{i+1}}
+\newcommand\uimnp{U_{i-1}^{n+1}}
+\newcommand\uipnp{U_{i+1}^{n+1}}
+\newcommand\theti{\theta_i}
+\newcommand\thetim{\theta_{i-1}}
+\newcommand\thetip{\theta_{i+1}}
+\newcommand\thetnu{\theta^{[\nu]}}
+\newcommand\thetnup{\theta^{[\nu+1]}}
+\newcommand\thetzero{\theta^{[0]}}
+\newcommand\thethat{\hat\theta}
+\newcommand\delnu{\delta^{[\nu]}}
+\newcommand\Jnu{J^{[\nu]}}
+\newcommand\Jhath{\hat J^h}
+\newcommand\q{Q}
+%\newcommand\u{u}
+\newcommand\Q{Q}
+\newcommand\intu{\int_{x_1}^{x_2} \q(x,t)\,dx}
+\newcommand\domega{\partial\Omega}
+\newcommand\ustar{U^*}
+\newcommand\qn{\Q^n}
+\newcommand\qnp{\Q^{n+1}}
+\newcommand\qnm{\Q^{n-1}}
+\newcommand\qnj{\Q^{n+j}}
+\newcommand\qnr{\Q^{n+r}}
+\newcommand\qimjn{\Q_{i-1,j}^n}
+\newcommand\qipjn{\Q_{i+1,j}^n}
+\newcommand\qipjpn{\Q_{i+1,j+1}^n}
+\newcommand\qipjmn{\Q_{i+1,j-1}^n}
+\newcommand\qimjpn{\Q_{i-1,j+1}^n}
+\newcommand\qijpn{\Q_{i,j+1}^n}
+\newcommand\qijmn{\Q_{i,j-1}^n}
+\newcommand\qimj{\Q_{i-1,j}}
+\newcommand\qipj{\Q_{i+1,j}}
+\newcommand\qijp{\Q_{i,j+1}}
+\newcommand\qijm{\Q_{i,j-1}}
+\newcommand\qimjm{\Q_{i-1,j-1}}
+\newcommand\qipjm{\Q_{i+1,j-1}}
+\newcommand\qimjp{\Q_{i-1,j+1}}
+\newcommand\qipjp{\Q_{i+1,j+1}}
+\newcommand\cond{\text{cond}}
+\newcommand\Rinv{R^{-1}}
+\newcommand\qnup{\q^{[\nu+1]}}
+\newcommand\qnu{\q^{[\nu]}}
+\newcommand\qinup{\q_i^{[\nu+1]}}
+\newcommand\qinu{\q_i^{[\nu]}}
+\newcommand\qimnu{\q_{i-1}^{[\nu]}}
+\newcommand\qimnup{\q_{i-1}^{[\nu+1]}}
+\newcommand\qipnu{\q_{i+1}^{[\nu]}}
+\newcommand\enu{e^{[\nu]}}
+\newcommand\enup{e^{[\nu+1]}}
+\newcommand\Minv{M^{-1}}
+\newcommand\qs{q^*}
+\newcommand\ezero{e^{[0]}}
+\newcommand\qzero{q^{[0]}}
+
+\newcommand{\hm}[1]{\frac{1}{h^{#1}}}
+\newcommand{\Tab}[1]{Table~\ref{tab:#1}}
+
+
+\newcommand\inttn{\int_{t_n}^{\tnp}}
+\newcommand\cell{{\cal C}}
+\newcommand\intCi{\int_{\celli}}
+%\newcommand\ql{q_l}
+\newcommand\ql{q_\ell}
+\newcommand\qr{q_r}
+%\newcommand\bu{\bar u}
+\newcommand\tqn{\tilde q^n}
+\newcommand\lamp{\lam^p}
+\renewcommand{\w}{w}
+\renewcommand{\wp}{\w^p}
+\renewcommand{\l}{\ell}
+\newcommand{\qm}{\q_m}
+\newcommand{\bx}{\bar x}
+%
+% from fv.tex
+%\newcommand{\minmod}{\text{minmod}}
+\newcommand{\talfip}{\tilde \alfip}
+\newcommand{\thetaip}{\theta_i^p}
+\newcommand{\tF}{\tilde F}
+\newcommand{\tG}{\tilde G}
+\newcommand{\maxmod}{\text{maxmod}}
+\newcommand{\celli}{{\cal C}_i}
+\newcommand{\cellim}{{\cal C}_{i-1}}
+\newcommand{\bxi}{\bar x_i}
+\newcommand{\sigin}{\sigma_i^n}
+\newcommand{\sigimn}{\sigma_{i-1}^n}
+\newcommand{\sigipn}{\sigma_{i+1}^n}
+\newcommand{\bukh}{\frac{\bu k}{h}}
+\renewcommand{\q}{q}
+\renewcommand{\tq}{\tilde \q}
+\newcommand{\tqnp}{\tq^n(x,t_{n+1})}
+\renewcommand{\tqn}{\tq^n(x,t_{n})}
+\newcommand{\thetain}{\theta_i^n}
+\newcommand{\thetaipn}{\theta_{i+1}^n}
+\newcommand{\alfip}{\alf_i^p}
+\newcommand{\cin}{C_i^n}
+\newcommand{\cimn}{C_{i-1}^n}
+\newcommand{\cipn}{C_{i+1}^n}
+\newcommand{\din}{D_i^n}
+\newcommand{\dipn}{D_{i+1}^n}
+\newcommand{\delin}{\delta_i^n}
+\newcommand{\delipn}{\delta_{i+1}^n}
+\newcommand{\Dqin}{\Delta \Q_i^n}
+\newcommand{\Dqipn}{\Delta \Q_{i+1}^n}
+\newcommand{\D}{\Delta }
+\renewcommand{\Dq}{\Delta\Q}
+\newcommand{\khbu}{\frac{k\bu}{h}}
+\newcommand\vu{\vec u}
+\newcommand\vx{\vec x}
+\newcommand\dvx{d\vec x}
+\newcommand\vE{\vec E}
+\newcommand\vsF{\vec {\cal F}}
+\newcommand\sF{{\cal F}}
+\newcommand\vj{\vec j}
+\newcommand\vV{\vec V}
+\newcommand\vW{\vec W}
+\newcommand\vP{\vec P}
+\newcommand\vF{\vec F}
+\newcommand\vn{\vec n}
+\newcommand\vnimj{\vec n_{i-1/2,j}}
+\newcommand{\nnimj}[1]{n_{i-1/2,j}^{#1}}
+\newcommand{\nnijm}[1]{n_{i,j-1/2}^{#1}}
+\newcommand{\eeimj}[1]{e_{i-1/2,j}^{#1}}
+\newcommand{\eeijm}[1]{e_{i,j-1/2}^{#1}}
+\newcommand{\veimj}{e_{i-1/2,j}}
+\newcommand{\veijm}{e_{i,j-1/2}}
+\newcommand\K{K}
+
+\newcommand\xii{\xi_{i-1/2}}
+\newcommand\xiip{\xi_{i+1/2}}
+\newcommand\fipjn{F_{i+1,j}^n}
+\newcommand\fijpn{F_{i,j+1}^n}
+\newcommand\gijpn{G_{i,j+1}^n}
+\newcommand\hipj{h_{i+1/2,j}}
+\newcommand\himj{h_{i-1/2,j}}
+\newcommand\hijm{h_{i,j-1/2}}
+\newcommand\hijp{h_{i,j+1/2}}
+\newcommand\sFipj{{\cal F}_{i+1/2,j}}
+\newcommand\sFimj{{\cal F}_{i-1/2,j}}
+\newcommand\sFijp{{\cal F}_{i,j+1/2}}
+\newcommand\sFijm{{\cal F}_{i,j-1/2}}
+\newcommand\bFimj{{\bar F}_{i-1/2,j}}
+\newcommand\bFipj{{\bar F}_{i+1/2,j}}
+\newcommand\bGijm{{\bar G}_{i,j-1/2}}
+\newcommand\bGijp{{\bar G}_{i,j+1/2}}
+\newcommand\vsFimj{\vec {\cal F}_{i-1/2,j}}
+\newcommand\vsFijm{\vec {\cal F}_{i,j-1/2}}
+\newcommand\kapij{\kappa_{ij}}
+\newcommand\Dxi{\Delta\xi}
+\newcommand\Deta{\Delta\eta}
+
+\newcommand\vijm{v_{i,j-1/2}}
+\newcommand\vijp{v_{i,j+1/2}}
+\newcommand\vimj{v_{i-1/2,j}}
+\newcommand\buimj{\bar u_{i-1/2,j}}
+\newcommand\bvijm{\bar v_{i,j-1/2}}
+\newcommand\vuimj{\vec u_{i-1/2,j}}
+\renewcommand{\uimj}{u_{i-1/2,j}}
+\renewcommand{\uijm}{u_{i,j-1/2}}
+\renewcommand{\uipj}{u_{i+1/2,j}}
+\renewcommand{\vimj}{v_{i-1/2,j}}
+\renewcommand{\vijm}{v_{i,j-1/2}}
+\renewcommand{\vijp}{v_{i,j+1/2}}
+
+\newcommand{\bfe}[1]{{\bf e}_{#1}}
+\newcommand{\bfnor}[1]{{\bf n}_{#1}}
+\newcommand\bfbu{{\bf \bar u}}
+\newcommand\bfbw{{\bf \bar w}}
+\newcommand\bfu{{\bf u}}
+\newcommand\bfbn{{\bf \bar n}}
+\newcommand\bfbd{{\bf \bar \delta}}
+\newcommand\bfd{{\bf \delta}}
+\newcommand\bfdxi{{\bf d\xi}}
+\newcommand\bfdeta{{\bf d\eta}}
+\newcommand\xiim{\xi_{i-1/2,j}}
+\newcommand\etajm{\eta_{i,j-1/2}}
+\newcommand\etajp{\eta_{i,j+1/2}}
+
+\newcommand\eimj{e_{i-1/2,j}}
+\newcommand\Xxi{X_{\xi}}
+\newcommand\Xeta{X_{\eta}}
+\newcommand\Yxi{Y_{\xi}}
+\newcommand\Yeta{Y_{\eta}}
+\newcommand\sinth{\sin\theta}
+\newcommand\costh{\cos\theta}
+
+%
+\newcommand{\spd}{s}
+\newcommand{\spdimh}{s\imh}
+
+\newcommand{\bigo}{{\mathcal O}}
+\newcommand{\bigoh}{{\mathcal O}}
+
+%\newcommand{\exweb}{\fbox{WWW}}
+\newcommand{\exweb}{ }
+%\newcommand{\book}{notes}
+\newcommand{\clawlink}[1]{{\tt [claw/book/chap\thechapter/#1]}}
+
+% capa
+
+\renewcommand{\bq}{\bar q}
+\newcommand\simhp{s_{i-1/2}^p}
+\newcommand{\bqin}{\bar\Q_{i}^n}
+\newcommand{\bqimn}{\bar\Q_{i-1}^n}
+\newcommand{\bqipn}{\bar\Q_{i+1}^n}
+\newcommand{\bqinp}{\bar\Q_{i}^{n+1}}
+\newcommand{\qimh}{\Q_{i-1/2}}
+\newcommand{\qiph}{\Q_{i+1/2}}
+\newcommand{\qimhn}{\Q_{i-1/2}^n}
+\newcommand{\qiphn}{\Q_{i+1/2}^n}
+\renewcommand{\qimnp}{\Q_{i-1}^{n+1}}
+\newcommand{\tFiphn}{\tilde F_{i+1/2}^n}
+\newcommand{\tFimhn}{\tilde F_{i-1/2}^n}
+\newcommand{\tFimhjn}{\tilde F_{i-1/2,j}^n}
+\newcommand{\tFiphjn}{\tilde F_{i+1/2,j}^n}
+\newcommand{\tGijphn}{\tilde G_{i,j+1/2}^n}
+\newcommand{\tGijmhn}{\tilde G_{i,j-1/2}^n}
+\newcommand{\tFimh}{\tilde F_{i-1/2}}
+\newcommand{\tFiph}{\tilde F_{i+1/2}}
+
+\newcommand{\tFimhj}{\tilde F_{i-1/2,j}}
+\newcommand{\tFiphj}{\tilde F_{i+1/2,j}}
+\newcommand{\tGijmh}{\tilde G_{i,j-1/2}}
+\newcommand{\tGijph}{\tilde G_{i,j+1/2}}
+
+\newcommand{\Fimh}{F_{i-1/2}}
+\newcommand{\Fiph}{F_{i+1/2}}
+\newcommand{\Fimhn}{F_{i-1/2}^n}
+\newcommand{\Fiphn}{F_{i+1/2}^n}
+\newcommand{\Fiphjn}{F_{i+1/2,j}^n}
+\newcommand{\Fimhjn}{F_{i-1/2,j}^n}
+\newcommand{\Gijmhn}{G_{i,j-1/2}^n}
+\newcommand{\Gijphn}{G_{i,j+1/2}^n}
+\newcommand{\lamimhp}{\lambda_{i-1/2}^p}
+\newcommand{\tWimh}{\widetilde \W_{i-1/2}}
+\newcommand{\tWimhp}{\widetilde \W_{i-1/2}^p}
+\newcommand{\tWiphp}{\widetilde \W_{i+1/2}^p}
+\newcommand{\Wimhp}{\W_{i-1/2}^p}
+\newcommand{\Wiphp}{\W_{i+1/2}^p}
+\newcommand{\Wimh}{\W_{i-1/2}}
+\newcommand{\Wiph}{\W_{i+1/2}}
+\newcommand{\alfpimh}{\alf^p_{i-1/2}}
+\newcommand{\alfimh}{\alf_{i-1/2}}
+\newcommand{\alfiph}{\alf_{i+1/2}}
+\newcommand{\kapi}{\kappa_i}
+\newcommand{\kapimh}{\kappa_{i-1/2}}
+\newcommand{\kkh}{\frac{\Dt}{\kapi \Dx}}
+\newcommand{\DQim}{\Delta\Q_{i-1/2}}
+
+%clawpdes:
+\newcommand\brho{\bar\rho}
+\newcommand{\tu}{\tilde u}
+\newcommand{\tp}{\tilde p}
+\newcommand{\trho}{\tilde \rho}
+\newcommand{\trhou}{\widetilde{\rho u}}
+
+
+\newcommand{\amdqimh}{{\cal A}^-\Delta \Q_{i-1/2}}
+\newcommand{\apdqimh}{{\cal A}^+\Delta \Q_{i-1/2}}
+\newcommand{\amdqiph}{{\cal A}^-\Delta \Q_{i+1/2}}
+\newcommand{\apdqiph}{{\cal A}^+\Delta \Q_{i+1/2}}
+\newcommand{\apmdqimh}{{\cal A}^{\pm}\Delta \Q_{i-1/2}}
+\newcommand{\lamimh}{\lam_{i-1/2}}
+
+%highres:
+\renewcommand{\bukh}{\frac{\bu\Dt}{\Dx}}
+\renewcommand{\delin}{\delta_{i-1/2}^n}
+\renewcommand{\thetain}{\theta_{i-1/2}^n}
+\renewcommand{\thetaip}{\theta_{i-1/2}^p}
+\renewcommand{\thetaipn}{\theta_{i+1/2}^n}
+\renewcommand{\alfip}{\alf_{i-1/2}^p}
+\renewcommand{\talfip}{\tilde\alf_{i-1/2}^p}
+\renewcommand{\lip}{\lam_{i-1/2}^p}
+\renewcommand{\Dqin}{\Delta\Q_{i-1/2}^n}
+
+%vcacou:
+\newcommand{\nph}{^{n+1/2}}
+%\newcommand{\tnph}{t_{n+1/2}}
+\newcommand{\imh}{_{i-1/2}}
+\newcommand{\jmh}{_{j-1/2}}
+\newcommand{\imhn}{_{i-1/2}^n}
+\newcommand{\iph}{_{i+1/2}}
+\newcommand{\iphn}{_{i+1/2}^n}
+\newcommand{\Zi}{Z_i}
+\newcommand{\Zim}{Z_{i-1}}
+
+%curvi:
+\newcommand\xieta{(\xi,\eta)}
+\newcommand\xideta{$\xi$-$\eta$ }
+\newcommand\uub{\bar u}
+\newcommand\ulb{\underline u}
+\newcommand\vw{\vec w}
+\newcommand\wub{\overline w}
+\newcommand\wlb{\underline w}
+\newcommand\bolde{{\bf e}}
+\newcommand\bhate{{\bf\hat e}}
+\newcommand\vz{\vec z}
+\newcommand\zub{\bar z}
+\newcommand\zlb{\underline z}
+\newcommand\Jinv{\ensuremath{J^{-1}}}
+\newcommand\JinvT{\ensuremath{J^{-T}}}
+\newcommand\Ginv{\ensuremath{G^{-1}}}
+\newcommand\Mllb{\underline{\underline M}}
+\newcommand\Muub{\overline{\overline M}}
+\newcommand\Gllb{\underline{\underline G}}
+\newcommand\Guub{\overline{\overline G}}
+\renewcommand{\aij}{a_{ij}}
+\newcommand\Uimj{U^1_{i-1/2,j}}
+\newcommand\Uipj{U^1_{i+1/2,j}}
+\newcommand\Uijm{U^2_{i,j-1/2}}
+\newcommand\Uijp{U^2_{i,j+1/2}}
+\newcommand\Vijm{U^2_{i,j-1/2}}
+\newcommand\Vijp{U^2_{i,j+1/2}}
+\newcommand\bfhimj{{\vec h}_{i-1/2,j}}
+\newcommand\bfhipj{{\vec h}_{i+1/2,j}}
+\newcommand\bfhijm{{\vec h}_{i,j-1/2}}
+\newcommand\bfhijp{{\vec h}_{i,j+1/2}}
+\newcommand\ximjm{x_{i-1/2,j-1/2}}
+\newcommand\yimjm{y_{i-1/2,j-1/2}}
+\newcommand\ximjp{x_{i-1/2,j+1/2}}
+\newcommand\yimjp{y_{i-1/2,j+1/2}}
+\newcommand\xipjm{x_{i+1/2,j-1/2}}
+\newcommand\yipjm{y_{i+1/2,j-1/2}}
+\newcommand\ximj{x_{i-1/2,j}}
+\newcommand\yimj{y_{i-1/2,j}}
+\newcommand\xijm{x_{i,j-1/2}}
+\newcommand\yijm{y_{i,j-1/2}}
+\newcommand\undergrad{\underline\grad}
+%\newcommand\R{{\cal R}}
+\newcommand\Wimj{\W_{i-1/2,j}}
+\newcommand\lamimj{\lam_{i-1/2,j}}
+\newcommand\amdqimj{\amdq_{i-1/2,j}}
+\newcommand\apdqimj{\apdq_{i-1/2,j}}
+\newcommand\apmdqimj{\apmdq_{i-1/2,j}}
+
+
+\newcommand\bfn{n}
+\newcommand\bfnimj{{\vec n}_{i-1/2,j}}
+\newcommand\bfnijm{{\vec n}_{i,j-1/2}}
+\newcommand\bfuimj{{\bf u}_{i-1/2,j}}
+\newcommand\bfF{{\bf F}}
+\newcommand\bfsF{\vec f}
+\newcommand\bfsFimj{{{\breve F}_{i-1/2,j}}}
+\newcommand\bfsFijm{{{\breve F}_{i,j-1/2}}}
+\newcommand\bfimj{{\bf e}_{i-1/2,j}}
+\newcommand\bfijm{{\bf e}_{i,j-1/2}}
+\newcommand{\bfeimj}{{\bf e}_{i-1/2,j}}
+\newcommand{\bfeijm}{{\bf e}_{i,j-1/2}}
+
+% quadril
+
+\newcommand\qsimj{\Q^*_{i-1/2,j}}
+\newcommand\qsijm{\Q^*_{i,j-1/2}}
+\newcommand\cellij{{\cal C}_{ij}}
+\newcommand\cellimj{{\cal C}_{i-1,j}}
+\newcommand\cellijm{{\cal C}_{i,j-1}}
+\newcommand\gamimj{\gamma_{i-1/2,j}^1}
+\newcommand\gamijm{\gamma_{i,j-1/2}^2}
+%\newcommand\Uimj{U_{i-1/2,j}}
+%\newcommand\Vijm{V_{i,j-1/2}}
+\newcommand\cellvol{|{\cal C}|}
+\newcommand\cellvolij{|{\cal C}_{ij}|}
+
+% unsplit
+
+\newcommand\intxi{\int_{\ximh}^{\xiph}}
+\newcommand\intyj{\int_{\yjmh}^{\yjph}}
+\newcommand\ximh{x_{i-1/2}}
+\newcommand\xiph{x_{i+1/2}}
+\newcommand\yjmh{y_{j-1/2}}
+\newcommand\yjph{y_{j+1/2}}
+\newcommand\qimjmn{\Q_{i-1,j-1}^n}
+\newcommand\intij{\int_{\ximh}^{\xiph}\int_{\yjmh}^{\yjph}}
+\newcommand\xim{x_{i-1}}
+\newcommand\xip{x_{i+1}}
+
+% sssource
+
+\newcommand\rhovn{\rho_{\scriptscriptstyle vN}}
+\newcommand\rhocj{\rho_{\scriptscriptstyle CJ}}
+\newcommand\scj{s_{\scriptscriptstyle CJ}}
+\newcommand\rhol{\rho_l}
+\newcommand\rhor{\rho_r}
+\newcommand\Tign{T_{\rm ign}}
+\newcommand\rhomerge{\rho_{\rm mrg}}
+
+% bc1
+\newcommand\Nn{_N^n}
+\newcommand\Npn{_{N+1}^n}
+\newcommand\Nmn{_{N-1}^n}
+\newcommand\Nphn{_{N+1/2}^n}
+\newcommand\Nmhn{_{N-1/2}^n}
+
+
+% IC's
+\newcommand{\ico}[1]{#1 \kern -1ex \raisebox{1.1ex}{$\circ$}}
+\newcommand{\icos}[2]{#1 \kern -1.1ex \raisebox{1.1ex}[.5em]{$\circ$}^{#2}}
+\newcommand{\icosw}[1]{\bar{w}^{#1}}
+%\newcommand{\icosw}[1]{w \kern -1.1ex \raisebox{1.1ex}[.5em]{$\circ$}^{#1}}
+
+% highresacc
+
+\newcommand{\Lode}{{\cal L}}
+
+% vcacou
+
+\newcommand\coeftr{C_{T}}
+\newcommand\coefre{C_{R}}
+\newcommand\rimhp{r_{i-1/2}^p}
+\newcommand\alfimhp{\alf_{i-1/2}^p}
+
+% fvscalar
+
+%\newcommand\qimhs{\Q_{i-1/2}^*}
+\newcommand\qimhs{\Qrp\imh}
+
+\newcommand\Dtj{\Dt^{(j)}}
+\newcommand\Dxj{\Dx^{(j)}}
+\newcommand\Qj{\Q^{(j)}}
+\newcommand\Phiin{\Phi_i^n}
+\newcommand\intxcell{\int_{x_{i-1/2}}^{x_{i+1/2}}}
+\newcommand\QDt{\Q^{(\Dt)}}
+\newcommand\qson{q_s}
+
+% nonconvex
+
+\newcommand{\argmin}{\operatornamewithlimits{argmin~}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax~}}
+
+% conlw
+
+\newcommand\nisum{\sum_{n=0}^\infty\,\sum_{i=-\infty}^\infty\,}
+
+% shallow
+
+\newcommand\qls{\q_*}
+
+% approxRs
+
+\newcommand{\rcond}[1]{(\ref{eqroecond}#1)}
+\newcommand\hq{\hat\Q}
+\newcommand\hqs{\hat\Q^*}
+\newcommand\hlamp{\hat\lambda^p}
+\newcommand\hWp{\widehat\W^p}
+\newcommand\hA{\hat A}
+%\newcommand\hrp{\hat r^p}
+\newcommand{\dd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand\zi{Z_i}
+\newcommand\zim{Z_{i-1}}
+\newcommand\bz{\bar Z}
+
+% unsplit
+%\newcommand\ij{_{ij}}
+\newcommand\ijm{_{i,j-1}}
+\newcommand\imj{_{i-1,j}}
+\newcommand\ijp{_{i,j+1}}
+\newcommand\ipj{_{i+1,j}}
+\newcommand\imhj{_{i-1/2,j}}
+\newcommand\iphj{_{i+1/2,j}}
+\newcommand\ijmh{_{i,j-1/2}}
+\newcommand\ijph{_{i,j+1/2}}
+\newcommand\imjmh{_{i-1,j-1/2}}
+\newcommand\imjph{_{i-1,j+1/2}}
+\newcommand\imhjm{_{i-1/2,j-1}}
+\newcommand\iphjm{_{i+1/2,j-1}}
+\newcommand\Rxinv{(R^x)^{-1}}
+\newcommand\apmbpmdq{{\cal A}^{\pm}{\cal B}^{\pm}\Delta\Q}
+\newcommand\apmbsdq{{\cal A}^{\pm}{\cal B}^{*}\Delta\Q}
+\newcommand\dq{\Delta\Q}
+
+%nondiag
+\newcommand\ddel{D}
+
+%elastic
+\newcommand{\deltx}[1]{\delta_x^{#1}}
+\newcommand{\delty}[1]{\delta_y^{#1}}
+\newcommand{\epse}[2]{\epsilon^{#1 #2}}
+\newcommand{\sige}[2]{\sigma^{#1 #2}}
+\newcommand\lame{{\lambda}}
+
+%other
+
+\newcommand{\QLh}{\Q\imh^{L,n+1/2}}
+\newcommand{\QRh}{\Q\imh^{R,n+1/2}}
+%\newcommand{\qrp}{\q^{\bigtriangledown}}
+%\newcommand{\Qrp}{\Q^{\bigtriangledown}}
+
+\newcommand{\Riem}{^{\vee^{\!\!\scriptscriptstyle{\!|}}}}
+\newcommand{\qrp}{\q\Riem}
+\newcommand{\Qrp}{\Q\Riem}
+\newcommand{\urp}{u\Riem}
+\newcommand{\hrp}{h\Riem}
+
+% ddbc
+
+\newcommand{\mbc}{m_{\scriptscriptstyle BC}}
+
+
+\newcommand\ljump{[\![}
+\newcommand\rjump{]\!]}
+
+% nonclass
+
+%\newcommand{\umax}{u_{\max}}
+\newcommand{\umaxl}{u_{\max,l}}
+\newcommand{\umaxr}{u_{\max,r}}
+
+% fvlin
+
+\newcommand\betaimh{\beta_{i-1/2}}
+\newcommand\betaiph{\beta_{i+1/2}}
+
+% multid
+
+\newcommand\oddt{\frac{d}{dt}}
+\newcommand\lu{U}
+\newcommand\lv{V}
+\newcommand\Soln{{\cal S}}
+
+% fvmultid
+
+\newcommand\sxt{S_t^x}
+\newcommand\syt{S_t^y}
+\newcommand\sxk{S_{\Dt}^x}
+\newcommand\syk{S_{\Dt}^y}
+\newcommand\sxhk{S_{\Dt/2}^x}
+
+% convlin
+
+%\newcommand\lq{q}
+\newcommand\lqn{q^n}
+\newcommand\lqin{q_i^n}
+\newcommand\lqnp{q^{n+1}}
+\newcommand\N{{\cal N}}
+
+% vclin
+
+\newcommand{\obq}{\q}
+\newcommand{\cq}{\bar \q}
+\newcommand\cqi{\bar \Q_i}
+\newcommand\cqim{\bar \Q_{i-1}}
+\newcommand\cqin{\bar \Q_i^{n}}
+\newcommand\cqinp{\bar \Q_i^{n+1}}
+\newcommand\cqimn{\bar \Q_{i-1}^{n}}
+\newcommand\cqipn{\bar \Q_{i+1}^{n}}
+\newcommand\qsimh{\Q^*_{i-1/2}}
+\newcommand\ui{u_i}
+\newcommand\uimh{u_{i-1/2}}
+\newcommand\uiph{u_{i+1/2}}
+\newcommand\uuq{\frac{u_{i-1}\qim}{\ui}}
+\newcommand\uuqi{\frac{\ui\qi}{\uim}}
+\newcommand\amdcqimh{{\cal A}^-\Delta\bar \Q\imh}
+\newcommand\amdcqiph{{\cal A}^-\Delta\bar \Q\iph}
+\newcommand\apdcqimh{{\cal A}^+\Delta\bar \Q\imh}
+
+% fvnonlin
+\newcommand\fvsm{f^{\,(-)}}
+\newcommand\fvsp{f^{\,(+)}}
+
+% source1
+
+\renewcommand{\akh}{\frac{\bu\Dt}{\Dx}}
+\newcommand{\drate}{\beta}
+
+\newcommand\us{\q^*}
+\newcommand\uss{\q^{**}}
+\newcommand\qis{\Q_i^*}
+\newcommand\aop{{\cal A}}
+\newcommand\bop{{\cal B}}
+\newcommand\ekaop{e^{\Dt\aop}}
+\newcommand\ekbop{e^{\Dt\bop}}
+\newcommand\abop{(\aop+\bop)}
+
+
+% already defined:
+
+%\newcommand\implies{\quad\Longrightarrow\quad}
+%\newcommand\qquad{\quad\quad}
+%\newcommand\for{\quad\mbox{for}~}
+%\newcommand\sf{{\cal F}}
+\renewcommand\gets{~:=~}
+\newcommand\enproof{\hskip 5pt\rule{1.5mm}{3mm}\\ \vskip 5pt}
+%\newcommand\div{\grad\cdot}
+
+\newcommand{\oneover}[1]{\frac{1}{#1}}
+\newcommand\third{\frac{1}{3}}
+\newcommand\sixth{\frac{1}{6}}
+\newcommand\twelth{\frac{1}{12}}
+\newcommand\tnm{t_{n-1}}
+\newcommand\ahinv{(A^h)^{-1}}
+\newcommand\ah{A^h}
+\newcommand\eh{E^h}
+\newcommand\uh{U^h}
+\newcommand\fh{F^h}
+%\newcommand\th{\tau^h}
+\newcommand\un{U^n}
+\newcommand\tn{t_n}
+\newcommand\unm{U^{n-1}}
+\newcommand\Ln{{\cal L}^n}
+\newcommand\Lqm{{\cal L}^{m-1}}
+\newcommand\enp{E^{n+1}}
+\newcommand\etl{e^{|\lam| T}}
+\newcommand\ekl{e^{k|\lam|}}
+\newcommand\klf{(1+k\lam)}
+\newcommand\ejm{E_{j-1}}
+\newcommand\ejp{E_{j+1}}
+\newcommand\ainv{A^{-1}}
+\newcommand\pizk{\pi(\zeta;\bark)}
+\newcommand\unr{U^{n+r}}
+\newcommand\Sol{{\cal S}}
+\newcommand\limnkt{\lim_{\stackrel{k\goto 0}{Nk=T}}}
+\newcommand\unpp{U^{n+2}}
+\newcommand\kLf{(1+kL)}
+\newcommand\sumr{\sum_{j=0}^r}
+\newcommand\sumrm{\sum_{j=0}^{r-1}}
+\newcommand\qand{\qquad\mbox{and}\qquad}
+\newcommand\rz{\rho(\zeta)}
+\newcommand\sz{\sigma(\zeta)}
+\newcommand\unj{U^{n+j}}
+\newcommand\kacc{k_{\mbox{\small acc}}}
+\newcommand\kstab{k_{\mbox{\small stab}}}
+\newcommand\gtgt{\gg}
+\newcommand\ltlt{\ll}
+\newcommand{\react}[1]{\stackrel{K_{#1}}{\rightarrow}}
+\newcommand{\reactb}[2]{\stackrel{K_{#1}}{~\stackrel{\rightleftharpoons}
+   {\scriptstyle K_{#2}}}~}
+\newcommand\bark{z}
+\newcommand\ftf{\frac{1}{\sqrt{2\pi}}}
+\newcommand\ftfh{\frac{h}{\sqrt{2\pi}}}
+\newcommand\eixx{e^{i\xi x}}
+\newcommand\emxx{e^{-i\xi x}}
+\newcommand\huxit{\hat u(\xi,t)}
+\newcommand\hv{\hat v(\xi)}
+\newcommand\eijh{e^{ijh\xi}}
+\newcommand\emjh{e^{-ijh\xi}}
+\newcommand\eih{e^{ih\xi}}
+\newcommand\emih{e^{-ih\xi}}
+\newcommand\eipl{e^{2\pi ipx/L}}
+\newcommand\emipl{e^{-2\pi ipx/L}}
+\newcommand\eiphl{e^{2\pi ijhp/L}}
+\newcommand\emiphl{e^{-2\pi ijhp/L}}
+\newcommand\intpi{\int_{-\pi/h}^{\pi/h}}
+\newcommand\Sreg{{\cal S}}
+\newcommand\dkhbar{{\cal D}_{k,h}(\bar x,\bar t)}
+
+
+\newcommand{\Sp}{{\cal S}}
+\newcommand{\p}[1]{^{(#1)}}
+\newcommand{\alf}{\alpha}
+\newcommand{\Rm}{\reals^m}
+\newcommand{\Rn}{\reals^n}
+\newcommand{\Rr}{\reals^r}
+\newcommand{\Rmn}{\reals^{m\times n}}
+\newcommand{\Rnn}{\reals^{n\times n}}
+\newcommand{\Range}{{\cal R}}
+\newcommand{\Null}{{\cal N}}
+\newcommand{\Span}{\mbox{span}}
+%\newcommand{\dim}{\mbox{dim}}
+\newcommand{\rank}{\mbox{rank}}
+%\newcommand{\det}{\mbox{det}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\FRR}{{\cal F}(\reals,\reals)}
+\newcommand{\diag}{\mbox{diag}}
+\newcommand{\PP}{{\cal P}}
+\newcommand{\lrarrow}{~\longleftrightarrow~}
+
+\newcommand{\intunit}{{\int_{-1}^1}}
+
+% amrsphere
+\newcommand{\Proj}{{{\rm l} \kern -.15em {\rm P} }}
+
+\def\Z{{\cal Z}}
+

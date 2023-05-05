@@ -1,0 +1,70 @@
+
+\documentclass{beamer}
+
+\usepackage{beamerprosper}
+\usepackage{listings}
+\usepackage{multimedia}
+%\usepackage{movie15}
+\input{beamermacros}
+\input{FVMHPmacros}
+
+\newcommand{\mkslide}[1]{\title{
+   \hskip 1.5cm Slide \#\theslideno\alph{subslide}\stepcounter{subslide} }
+   \input{#1}\stepcounter{slideno}\setcounter{subslide}{1}}
+
+\newcommand{\mkslidelabel}[2]{\title{#2}\input{#1}}
+
+% draft versions with path to slide:
+%\renewcommand{\mkslide}[1]{\title{#1}\input{#1}}
+%\renewcommand{\mkslidelabel}[2]{\title{#2 ~~~#1}\input{#1}}
+
+\mode<presentation>
+{
+  \usefonttheme{professionalfonts}
+  \usecolortheme{UW}
+  \useinnertheme{circles}
+  %\useoutertheme{splitnofooter}
+  \useoutertheme{split2}
+
+\setbeamertemplate{navigation symbols}{}
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title[Short Paper Title] % (optional, use only with long paper titles)
+{Title As It Is In the Proceedings}
+
+\subtitle
+{Include Only If Paper Has a Subtitle}
+
+\author[R.\ J.\ LeVeque, University of Washington]{R.\ J.\ LeVeque}
+
+\institute[UW] % (optional, but mostly needed)
+
+\date[] 
+
+
+\begin{document}
+\newcounter{slideno}
+\setcounter{slideno}{1}
+\newcounter{subslide}
+\setcounter{subslide}{1}
+
+
+
+%--------------------------------------------------------------------
+% SLIDES
+%--------------------------------------------------------------------

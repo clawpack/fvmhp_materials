@@ -26,3 +26,4 @@
  - FVMHP24 - Multidimensional finite volume methods
  - FVMHP25 - Acoustics in Heterogeneous Media
 
+Latex source for each slide deck can be found in the `slides` directory.

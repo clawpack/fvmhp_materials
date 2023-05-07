@@ -41,4 +41,4 @@ See [slides/README.md](slides/README.md) for some information about how the slid
 
 Some of the examples in the book have Clawpack code to accompany them that can be found in the Clawpack `apps repository`.  See [fvmbook](http://www.clawpack.org/fvmbook.html) for pointers.
 
-The book [Riemann Problems and Jupyter Solutions](http://www.clawpack.org/riemann_book/) illustrates many aspects of Riemann problems and their solution in the form of Jupyter notebooks.
+The book [Riemann Problems and Jupyter Solutions](http://www.clawpack.org/riemann_book/) by D.I. Ketcheson, R.J. LeVeque, and M.J. del Razo (SIAM, 2020) illustrates many aspects of Riemann problems and their solution in the form of Jupyter notebooks.

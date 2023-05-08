@@ -10,7 +10,9 @@ See the [book webpage](http://www.clawpack.org/fvmhp_materials/) for links to th
 
 This repository currently contains:
 
-- Slides to accompany a set of lectures from 2023 that will be posted on the [Clawpack YouTube channel](https://www.youtube.com/channel/UCxIdwWtDvUG_kdn-KiSVroQ) soon.
+- Slides to accompany a set of lectures from 2023 that will be posted on the
+  [Clawpack YouTube channel](https://www.youtube.com/channel/UCxIdwWtDvUG_kdn-KiSVroQ) in the
+  [FVMHP playlist](https://www.youtube.com/playlist?list=PLHJVj2zE9oLRPo7Xn1QI6WTl9QrBXLkqS)
 - Latex files that created the slides, which you are free to modify or recombine for your own lectures.
 
 In the future other materials may be added, in particular some Jupyter notebooks to illustrate some of this material.

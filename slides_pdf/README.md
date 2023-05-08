@@ -1,4 +1,16 @@
-# Brief summary of topics covered in each deck:
+# fvmhp_materials/slides_pdf
+
+This directory contains a pdf file for each slide deck.
+
+In addition, `fvmhp01-25.pdf` contains all slides from decks 01-25, and
+`fvmhp01-25_draft.pdf` contains a version showing the path to the latex
+source for each individual slide in the bottom corner of the slide.
+
+Latex source for each slide deck can be found in the `slides` directory,
+and for each slide in `slides/fvm`.
+
+
+## Brief summary of topics covered in each deck:
 
  - FVMHP01 - Derivation of Conservation Laws
  - FVMHP02 - Variable Coefficient Advection
@@ -25,5 +37,3 @@
  - FVMHP23 - Fractional step methods
  - FVMHP24 - Multidimensional finite volume methods
  - FVMHP25 - Acoustics in Heterogeneous Media
-
-Latex source for each slide deck can be found in the `slides` directory.

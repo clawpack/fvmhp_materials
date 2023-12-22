@@ -1,0 +1,293 @@
+<HTML>
+ <HEAD>
+  <!-- $MVD$:app("MicroVision WebExpress","769") -->
+  <!-- $MVD$:template("F:\clawPC\website\mvtemp\clawpack.wbt","394937ee","0") -->
+  <!-- $MVD$:color("8","e8ffff","Yellow","1") -->
+  <TITLE>CLAWPACK</TITLE>
+  <META NAME="GENERATOR" CONTENT="MicroVision Development / WebExpress">
+ </HEAD>
+ <BODY BGCOLOR="#FFFFE8" LINK="#7F0000" VLINK="#7F0000">
+<P ALIGN=CENTER> &nbsp;</P>
+
+  <H1 ALIGN=CENTER>
+   Errata for the book</H1>
+  <P ALIGN=CENTER>
+   <I><B><FONT SIZE="5"><a href="../book.html">Finite Volume Methods for 
+   Hyperbolic Problems</a></FONT></B></I></P>
+  <P ALIGN=CENTER>
+   by</P>
+  <P ALIGN=CENTER>
+   <B><a href="http://faculty.washington.edu/rjl">Randall J. LeVeque</a></B></P>
+  <P>
+
+<p>
+<hr>
+<b>
+Please send additional corrections to rjl@amath.washington.edu
+<p>
+Line numbers include figure captions and section headings.  <br>
+Negative line numbers indicate a number of lines up from the bottom of the page.
+</b>
+
+<p>
+p. 18, last line: "q(x,t) =" should be "<b>q(x,t_0) = </b>"
+
+<p>
+p. 21, equation (2.24): there should not be a minus sign on the right.
+
+<p>
+p. 22, line -13 (displayed equation with integrals): First integral on right
+hand side should have a minus sign.
+
+<p>
+p. 33, line above (2.77): "\tilde A_{qx}" should be "<b>\tilde Aq_x</b>"
+
+<p>
+p. 46, Exercise 2.4: (2.51) should be (2.50).
+
+<p>
+p. 46, line -7: "where <i>a</i> is a constant", the first
+"a" should be italicized.
+
+<p>
+p. 50, line -12: "S(x) = 1 if -0.3 < x < -0.1" should be 
+"S(x) = <b>0.5</b> if -0.3 < x < -0.1"
+
+<p>
+p. 55, first line of (3.28): "x < 0" should be <b>"x \leq 0"</b>.
+
+<p>
+p. 58, the last vector in (3.35) should be <b>r^3</b> rather than r^1.
+
+<p>
+p. 66, equation (4.8): the last term should not be divided by \Delta x.
+
+<p>
+p. 78, first displayed equation: the integrand should be
+<b>f(q(x_{i-1/2},t))</b>.
+
+<p>
+p. 83, line before (4.56): "Using (4.47) in (4.49)..." should be
+"Using <b>(4.48)</b> in (4.49)..."
+
+<p>
+p. 89, line -10: "claw/1d/example1" should be
+"<b>claw/clawpack/1d/example1</b>"
+
+<p>
+p. 91, line 11: unix> setenv MATLABPATH ".:\$CLAW/matlab"<br>
+should be <b>unix> setenv MATLABPATH ".:$CLAW/matlab"</b>
+
+<p>
+p. 94, line -8: "mx < maxmx" should be "<b>mx \leq maxmx</b>"
+
+<p>
+p. 99, line 9: Change last sentence to "See
+<b>claw/applications/acoustics/1d/varying/interface</b> for an example of the use
+of auxiliary arrays."
+
+<p>
+p. 103, line below (6.9): "defined in Section 4.12" should be "defined in
+(4.45) and (4.60)".
+
+
+<p>
+p. 107, equation (6.17): change leading minus sign in second line to plus.
+
+<p>
+p. 122, equation (6.66): change "k" in numerator of fraction to <b>"\Delta
+t"</b>
+
+<p>
+p. 124, line 4: "nonuniform gird" should be "nonuniform <b>grid</b>".  
+<p>
+p. 127, line before (6.77): should read "but with the 1 replaced by
+<b>\kappa_{i-1}/\kappa_{i-1/2}:</b>"
+
+<p>
+p. 128, In Exercise 6.7, the expression for D_i^n, 
+the subscripts <b>i-1/2</b> and <b>i+1/2</b> should
+be switched. (The first \theta should be \theta_{i+1/2} and both
+the numerator and denominator of the ratio should contain \theta_{i-1/2}.)
+
+<p>
+p. 131, Two lines below equation (7.4) Q_n^{n+1} should be Q_N^{n+1} .
+
+<p>
+p. 136 second eq. down from (7.14),  W_1^1  should be <b>W_1^2</b>.
+
+<p>
+p. 142, line -13: "O(\Delta x^s) as s \goto 0" should be "... as <b>\Delta
+x</b> \goto 0".
+
+<p>
+p. 173, line after (9.51): B(x) = <b>\Lambda(x)</b> R_x^{-1}(x)R(x)
+
+<p>
+p. 177, two lines before (9.54): Section 2.8 should be <b>3.8</b>.
+
+<p>
+p. 181, (9.66): Subscripts are reversed on the fluctuations.
+
+<p>
+p. 199, between (10.27) and (10.28): "to give give second-order accuracy"
+has an extra "give".
+
+<p>
+p. 215, equation (11.33): integral on right hand side should go from
+<b> - infinity</b> to infinity, rather than 0 to infinity.
+
+<p>
+p. 226, Exercise 11.7, the first line of the function definition should say
+<b>x<0</b> rather than 0<x.
+
+<p>
+p. 228, line -10: "x/t=x_{i-1/2} is simply q_s" should read
+"<b>(x-x_{i-1/2})/t =0</b> is simply q_s".
+
+<p>
+p. 236, line 7,8: there should be no tildes on the last three W's and the
+last W should have subscript i+1/2, so it reads " by comparing
+W_{i-1/2} to W_{i-3/2} or <b>W_{i+1/2}</b> depending on the sign of
+s_{i-1/2}".
+
+<p>
+p. 242, line 10, in the double integral, "dx" should be "dx <b>dt</b>".
+
+<p>
+p. 246, equation (12.46): under "\inf_{w \in W}" should be "\inf_{<b>q</b> \in W}"
+
+<p>
+p. 260, 262, 280, 286: Figures 13.5, 13.7, 13.16, and 13.20 all
+show the Riemann solution at time t=1.
+
+<p>
+p. 261,   The third sentence of the third paragraph should read 
+"If the pth wave is a shock, then<br>
+characteristics of family 1 through p-1 will cross from <b>right to left</b>,<br>
+characteristics of family p+1 through m will cross from <b>left to right</b>, ..."
+
+<p>
+p. 261, line -7: "This as discussed" should be "This <b>is</b> discussed".
+
+<p>
+p. 263, displayed equation: "u_m = \epsilon \sqrt{g h_0}" should be 
+"u_m = \epsilon \sqrt{<b>g/h_0</b>}"
+
+<p>
+p. 267, line -13:  The value of h_m should be <b>h_m = 1.5514</b>. <br>
+(The value h_m = 2.1701 is for h_l=h_r=1, u_l=1, and u_r = -1.)
+
+<p>
+p. 282, line after (13.59): "then the solution consists of the these two
+shocks",  Delete the second "the".
+
+<p>
+p. 284, equation (13.63): The second component of f(q) in the last form
+given should read <b>(q^2)^2/q^1 + ...</b>.
+
+<p>
+p. 285, equation (13.64): The (2,1) entry in the first matrix should be 
+<b>-(q^2)^2/(q^1)^2 + g q^1</b>.
+
+<p>
+p. 290, Exercise 13.12(c): "Lax Entropy Condition 11.1" should be
+<b>13.1</b>.
+
+<p>
+p. 307, 308: Figures 14.3 and 14.4 both show the Riemann solution at time
+t=1.
+
+<p>
+p. 324, equation (15.46): There is a hat missing on "u_m" in the first line,
+it should read: "<b>\lambda_m^1 = \hat u_m - ...</b>".
+
+<p>
+p. 324, equation (15.47): The "-2(...)" in the second line should be
+"<b>+</b>2(...)"</br>
+Line before equation (15.47): "using (13.33)" should be "using <b> (13.32)</b>"
+
+<p>
+p. 328, equation (15.60):  <br>
+Top line: "\lambda_i^p" should be "<b>\lambda_{i-1}^p</b>" <br>
+Bottom line: "\lambda_{i+1}^p" should be "<b>\lambda_i^p</b>" <br>
+
+<p>
+p. 328, line -8 and p. 329, line -14: "van Lear" should be "<b>van Leer</b>"
+
+<p>
+p. 332-333, captions to Figures 15.5 and 15.6: t = 0.38 should be <b>t =
+0.038</b>.
+
+<p>
+p. 333, Figure 15.6:  
+The HLLE Riemann solver used to compute the results shown in Figure 15.6
+had a bug.<br>   The correct results look only slightly better.
+See <a href="../book/chap15/wcblast/www">book/chap15/wcblast</a> for the
+corrected code and new figures.
+
+<p>
+p. 391, equation (17.43): The factor "\Delta t / 2" in the first line of this
+formula should be "<b>\Delta t / 4</b>".
+
+<p>
+p. 403, equation (17.82): "psi(w(x-st)/\tau)" should be 
+"<b> psi(w((x-st)/\tau))</b>" on the left hand side.
+
+<p>
+p. 443, equation (19.22):  The integral should be divided by "<b>\Delta x
+\Delta y</b>".
+
+<p>
+p. 444, equation (19.28):  "\Delta x" should be "\Delta y"
+
+<p>
+p. 445, equation (19.29):  "\Delta x" in the second line should be "\Delta y"
+
+<p>
+p. 445, equation (19.29):  "Q_{ij}^n" in the third line should be
+"Q_{ij}^{**}"
+
+<p>
+p. 454, Figure 20.4: the downward going waves should be labelled
+"v_{i-1,j-1/2}^- ..." rather than
+"v_{i-1,j+1/2}^- ..."
+
+<p>
+p. 470, equation (21.2):  "(A^- + B^+)(A^- + B^+)" should be 
+"(A^- + <b>A</b>^+)(<b>B</b>^- + B^+)".
+
+<p>
+p. 478, equation (21.26):
+The impedance "Z_{i,j+1}" in the numerator should be "<b>Z_{ij}</b>".
+
+<p>
+p. 481, equation (21.36): 
+The last term in the numerator of the first line, "(h_r u_r - h_l u_l)"
+should be "(h_r <b>v</b>_r - h_l <b>v</b>_l)"
+
+<p>
+p. 481, equation (21.36): 
+If u_r does not equal u_l then the expression (21.36) can be simplified to
+obtain (21.34) using the definition of u_hat.  Hence use of
+the Roe average (21.34) does give a matrix $\hat A$ that satisfies the usual
+requirement (21.35) and the discussion at the bottom of this page should be
+deleted.
+
+<p>
+p. 496, equation (22.16):
+The entries "\mu" in the 4th and 6th rows of the matrix A should be
+"<b>-\mu</b>" (negated).
+
+
+<p>
+p. 510, equation (22.67):
+u = c_{pl} should be <b>u = -c_{pl}</b>.
+
+<p>
+p. 531, line -17, a left paren "(" is missing before "xlower".  It should
+read "<b>(xc,yc) = (xlower + ...</b>".
+<p>
+
+ </BODY>
+</HTML>

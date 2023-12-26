@@ -10,7 +10,7 @@ See the [book webpage](http://www.clawpack.org/fvmhp_materials/) for links to th
 
 This repository currently contains:
 
-- Slides to accompany a set of lectures from 2023 that will be posted on the
+- Slides to accompany a set of 25 lectures from 2023 that are posted on the
   [Clawpack YouTube channel](https://www.youtube.com/channel/UCxIdwWtDvUG_kdn-KiSVroQ) in the
   [FVMHP playlist](https://www.youtube.com/playlist?list=PLHJVj2zE9oLRPo7Xn1QI6WTl9QrBXLkqS)
 - Latex files that created the slides, which you are free to modify or recombine for your own lectures.
@@ -19,13 +19,13 @@ In the future other materials may be added, in particular some Jupyter notebooks
 
 ## License
 
-These materials are released under the CC-BY-NC-ND License.
+These materials are released under the CC-BY License.
 See
-[LICENSE.md](https://github.com/clawpack/fvmhp_materials/blob/master/LICENSE.md)
+[LICENSE.txt](https://github.com/clawpack/fvmhp_materials/blob/master/LICENSE.txt)
 for the license and read more at [Creative
-Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+Commons](https://creativecommons.org/licenses/by/4.0/).
 
-You are welcome to use these materials for your own non-commercial purposes, and free to modify the slides as desired to better fit your needs.  Please acknowledge the original author when appropriate.
+You are welcome to use these materials for your own purposes, and free to modify the slides as desired to better fit your needs.  Please acknowledge the original author when appropriate.
 
 ## Slide decks as pdf files
 
